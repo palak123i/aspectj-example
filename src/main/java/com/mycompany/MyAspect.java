@@ -19,6 +19,7 @@ public class MyAspect {
         //System.out.println("Class: " + thisJoinPoint.getClass());
         //System.out.println("Target: " + thisJoinPoint.getTarget());
         //System.out.println("Long String: " + thisJoinPoint.toLongString());
+        System.out.println("The method: " + thisJoinPoint.getSignature() + " is getting called from: " + Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()));
         for(Object arg : thisJoinPoint.getArgs()) {
             //System.out.println("Argument: " + arg);
         }
